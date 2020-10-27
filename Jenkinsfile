@@ -13,6 +13,12 @@ pipeline {
       }
     }
 
+    stage('test') {
+      steps {
+        bat(script: 'mvn test', returnStatus: true)
+      }
+    }
+
   }
   environment {
     mvn = 'clean'
