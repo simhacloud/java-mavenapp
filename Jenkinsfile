@@ -9,7 +9,7 @@ pipeline {
 
     stage('compile') {
       steps {
-        bat(script: 'mvn compile', returnStatus: true)
+        bat(script: 'mvn install', returnStatus: true)
       }
     }
 
