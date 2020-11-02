@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('clean') {
+    stage('build') {
       steps {
-        bat(script: 'mvn clean', returnStatus: true)
+        bat(script: 'mvn clean install', returnStatus: true)
       }
     }
 
